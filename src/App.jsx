@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../logo.png';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -68,16 +67,27 @@ function App() {
   const Header = () => (
     <header style={{
       background: 'white',
-      <img src={logo} alt="Fly4Wonders" style={{ height: '50px' }} />
+     
       marginBottom: '2rem',
       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
       borderBottom: '3px solid #185FA5'
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <div style={{ fontSize: '24px', fontWeight: 'bold', cursor: 'pointer', color: '#185FA5' }} onClick={() => setCurrentPage('home')}>
-            ✈️ Fly4wonders
-          </div>
+         <div
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px',
+    cursor: 'pointer'
+  }}
+  onClick={() => setCurrentPage('home')}
+>
+  
+  <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#185FA5' }}>
+    Fly4Wonders
+  </span>
+</div>
           <nav style={{ display: 'flex', gap: '1rem', alignItems: 'center', fontSize: '14px', flexWrap: 'wrap' }}>
             <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Home</button>
             <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Browse</button>
@@ -682,6 +692,12 @@ function App() {
       <Header />
       {renderPage()}
       <Footer />
+      {showAuthModal && <AuthModal />}
+    </div>
+  );
+}
+
+export default App;  <Footer />
       {showAuthModal && <AuthModal />}
     </div>
   );
