@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../logo.png';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -67,7 +68,7 @@ function App() {
   const Header = () => (
     <header style={{
       background: 'white',
-      padding: '1rem 1.5rem',
+      <img src={logo} alt="Fly4Wonders" style={{ height: '50px' }} />
       marginBottom: '2rem',
       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
       borderBottom: '3px solid #185FA5'
