@@ -21,7 +21,41 @@ function App() {
   ];
 
   
-
+const packages = [
+  {
+    id: 101,
+    name: 'Thailand Group Tour',
+    destination: 'Thailand',
+    price: 40000,
+    duration: '5 Nights / 6 Days',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1528181304800-259b08848526',
+    includes: ['Hotel', 'Breakfast', 'Sightseeing'],
+    reviews: 120
+  },
+  {
+    id: 102,
+    name: 'Vietnam Escape',
+    destination: 'Vietnam',
+    price: 46000,
+    duration: '6 Nights / 7 Days',
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1528127269322-539801943592',
+    includes: ['Hotel', 'Cruise', 'Transfers'],
+    reviews: 98
+  },
+  {
+    id: 103,
+    name: 'Bali Honeymoon',
+    destination: 'Bali',
+    price: 56000,
+    duration: '5 Nights / 6 Days',
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4',
+    includes: ['Villa Stay', 'Dinner', 'Sightseeing'],
+    reviews: 145
+  }
+];
   const activities = [
     { id: 201, name: 'Scuba Diving', location: 'Goa', price: 2500, rating: 4.9, image: '🤿', description: 'Explore coral reefs', duration: '4 hours', reviews: 234 },
     { id: 202, name: 'Mountain Biking', location: 'Himalayas', price: 1500, rating: 4.7, image: '🚴', description: 'Mountain trail ride', duration: '6 hours', reviews: 145 },
