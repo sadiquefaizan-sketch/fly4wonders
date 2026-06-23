@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import thailand1 from './images/thailand1.jpg';
 import thailand2 from './images/thailand2.jpg';
 import thailand3 from './images/thailand3.jpg';
@@ -34,19 +34,6 @@ const [leadForm, setLeadForm] = useState({
   pax: ''
 });
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
-useEffect(() => {
-  if (!selectedItem) return;
-  const images = getGalleryImages(selectedItem);
-  const timer = setInterval(() => {
-    setGalleryImage(prev => {
-      const current = images.indexOf(prev || selectedItem.image);
-      const next = (current + 1) % images.length;
-      return images[next];
-    });
-  }, 3000);
-
-  return () => clearInterval(timer);
-}, [selectedItem]);
 
   const hotels = [
     { id: 1, name: 'Beachfront Paradise', location: 'Goa', price: 3500, rating: 4.8, image: '🏨', description: 'Luxury beachside resort', reviews: 245, amenities: ['WiFi', 'Pool', 'Spa'] },
