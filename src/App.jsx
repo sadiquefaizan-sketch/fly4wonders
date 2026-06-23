@@ -861,18 +861,78 @@ const GroupToursPage = () => (
               background: 'linear-gradient(135deg, #E6F1FB 0%, #85B7EB 100%)',
               borderRadius: '12px', padding: '2rem', textAlign: 'center', marginBottom: '1.5rem',
               border: '1px solid #B5D4F4'
-            }}>
-             <img
-  src={galleryImage || selectedItem.image}
-  alt={selectedItem.name}
-  style={{
-    width: '100%',
-    height: '400px',
-    objectFit: 'cover',
-    borderRadius: '12px'
-  }}
-/>
+           <div style={{ position: 'relative' }}>
+  <img
+    src={galleryImage || selectedItem.image}
+    alt={selectedItem.name}
+    style={{
+      width: '100%',
+      height: '400px',
+      objectFit: 'cover',
+      borderRadius: '12px'
+    }}
+  />
 
+  <button
+    onClick={() => {
+      const images = [
+        selectedItem.image,
+        'https://images.unsplash.com/photo-1548013146-72479768bada',
+        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
+        'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
+      ];
+      const current = images.indexOf(galleryImage || selectedItem.image);
+      const prev = (current - 1 + images.length) % images.length;
+      setGalleryImage(images[prev]);
+    }}
+    style={{
+      position: 'absolute',
+      left: '15px',
+      top: '45%',
+      background: 'white',
+      border: 'none',
+      borderRadius: '50%',
+      width: '40px',
+      height: '40px',
+      cursor: 'pointer',
+      fontSize: '20px'
+    }}
+  >
+    ‹
+  </button>
+
+  <button
+    onClick={() => {
+      const images = [
+        selectedItem.image,
+        'https://images.unsplash.com/photo-1548013146-72479768bada',
+        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
+        'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
+      ];
+      const current = images.indexOf(galleryImage || selectedItem.image);
+      const next = (current + 1) % images.length;
+      setGalleryImage(images[next]);
+    }}
+    style={{
+      position: 'absolute',
+      right: '15px',
+      top: '45%',
+      background: 'white',
+      border: 'none',
+      borderRadius: '50%',
+      width: '40px',
+      height: '40px',
+      cursor: 'pointer',
+      fontSize: '20px'
+    }}
+  >
+    ›
+  </button>
+</div>
+ }}>
+            
 <div style={{
   display: 'grid',
   gridTemplateColumns: 'repeat(5, 1fr)',
