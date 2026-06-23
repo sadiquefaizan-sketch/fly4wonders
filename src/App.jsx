@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../logo.png';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -74,7 +75,7 @@ function App() {
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-         <div
+        <div
   style={{
     display: 'flex',
     alignItems: 'center',
@@ -83,12 +84,20 @@ function App() {
   }}
   onClick={() => setCurrentPage('home')}
 >
-  
+
+  <img
+    src={logo}
+    alt="Fly4Wonders"
+    style={{
+      height: '50px',
+      width: 'auto'
+    }}
+  />
+
   <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#185FA5' }}>
     Fly4Wonders
   </span>
-</div>
-          <nav style={{ display: 'flex', gap: '1rem', alignItems: 'center', fontSize: '14px', flexWrap: 'wrap' }}>
+</div>       <nav style={{ display: 'flex', gap: '1rem', alignItems: 'center', fontSize: '14px', flexWrap: 'wrap' }}>
             <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Home</button>
             <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Browse</button>
             <button onClick={() => setCurrentPage('community')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Community</button>
