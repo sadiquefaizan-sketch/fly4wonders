@@ -183,10 +183,9 @@ function App() {
   const HomePage = () => (
 <>
    <div style={{
-  backgroundImage: "url('/logo.png')",
-  backgroundColor: '#185FA5',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'right center',
+ backgroundImage: "linear-gradient(rgba(24,95,165,0.75), rgba(12,68,124,0.75)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')",
+backgroundSize: 'cover',
+backgroundPosition: 'center',
   backgroundSize: '220px',
   color: 'white',
   padding: '4rem 2rem',
