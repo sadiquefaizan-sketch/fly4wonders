@@ -224,7 +224,7 @@ const packages = [
           }}
         >
           {authMode === 'login' ? 'Sign In' : 'Create Account'}
-        <button
+        </button>
 
  <button
           onClick={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}
