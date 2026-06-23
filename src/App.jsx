@@ -181,6 +181,7 @@ function App() {
   );
 
   const HomePage = () => (
+<>
    <div style={{
   backgroundImage: "url('/logo.png')",
   backgroundColor: '#185FA5',
@@ -294,6 +295,7 @@ function App() {
         ))}
       </div>
     </div>
+   </>
   );
 
   const BookingsPage = () => (
