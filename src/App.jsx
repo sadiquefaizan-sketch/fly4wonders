@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -10,6 +10,27 @@ function App() {
   const [communityTab, setCommunityTab] = useState('stories');
   const [selectedItem, setSelectedItem] = useState(null);
   const [galleryImage, setGalleryImage] = useState('');
+useEffect(() => {
+  if (!selectedItem) return;
+
+  const images = [
+    selectedItem.image,
+    'https://images.unsplash.com/photo-1548013146-72479768bada',
+    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
+    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
+    'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
+  ];
+
+  const timer = setInterval(() => {
+    setGalleryImage(prev => {
+      const current = images.indexOf(prev || selectedItem.image);
+      const next = (current + 1) % images.length;
+      return images[next];
+    });
+  }, 3000);
+
+  return () => clearInterval(timer);
+}, [selectedItem]);
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
 
   const hotels = [
