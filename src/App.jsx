@@ -20,52 +20,7 @@ function App() {
     { id: 6, name: 'Bangkok Modern', location: 'Thailand', price: 1500, rating: 4.6, image: '🏙️', description: 'Modern city hotel', reviews: 334, amenities: ['WiFi', 'Pool', 'Gym'] },
   ];
 
-  const packages = [
-  {
-    id: 101,
-    name: 'Thailand Group Tour',
-    destination: 'Thailand',
-    price: 39999,
-    duration: '5 Nights / 6 Days',
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1528181304800-259b08848526',
-    includes: ['Hotel', 'Breakfast', 'Sightseeing', 'Transfers'],
-    reviews: 120
-  },
-  {
-    id: 102,
-    name: 'Vietnam Escape',
-    destination: 'Vietnam',
-    price: 45999,
-    duration: '6 Nights / 7 Days',
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1528127269322-539801943592',
-    includes: ['Hotel', 'Cruise', 'Meals', 'Transfers'],
-    reviews: 98
-  },
-  {
-    id: 103,
-    name: 'Bali Honeymoon',
-    destination: 'Bali',
-    price: 55999,
-    duration: '5 Nights / 6 Days',
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4',
-    includes: ['Villa Stay', 'Candle Light Dinner', 'Sightseeing'],
-    reviews: 145
-  },
-  {
-    id: 104,
-    name: 'Sri Lanka Tour',
-    destination: 'Sri Lanka',
-    price: 45000,
-    duration: '6 Nights / 7 Days',
-    rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
-    includes: ['Hotel', 'Meals', 'AC Coach', 'Sightseeing'],
-    reviews: 88
-  }
-];
+  
 
   const activities = [
     { id: 201, name: 'Scuba Diving', location: 'Goa', price: 2500, rating: 4.9, image: '🤿', description: 'Explore coral reefs', duration: '4 hours', reviews: 234 },
@@ -159,7 +114,7 @@ function App() {
   );
 
   const AuthModal = () => (
-    <div style={{
+    
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
       background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000
     }}>
@@ -315,17 +270,26 @@ backgroundPosition: 'center',
 />
             <h3 style={{ marginBottom: '0.25rem', color: '#185FA5', fontSize: '14px' }}>{pkg.name}</h3>
             <p style={{ color: '#888', fontSize: '12px', marginBottom: '0.5rem' }}>{pkg.duration}</p>
-            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#FFA500', marginBottom: '0.5rem' }}>₹{(pkg.price/1000).toFixed(0)}k</div><div style={{
-  display: 'flex',
-  justifyContent: 'space-between',
-  marginBottom: '10px',
-  fontSize: '13px',
-  color: '#666'
-}}>
-  <span>⭐ {pkg.rating}</span>
-  <span>{pkg.reviews} Reviews</span>
-</div>
-            <button
+            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#FFA500', marginBottom: '0.5rem' }}>₹{(pkg.price/1000).toFixed(0)}k</div>
+            <button<button
+  onClick={() => {
+    setSelectedItem(pkg);
+    setCurrentPage('detail');
+  }}
+  style={{
+    background: '#FFA500',
+    color: 'white',
+    border: 'none',
+    padding: '6px 10px',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '12px',
+    width: '100%',
+    marginBottom: '8px'
+  }}
+>
+  View Details
+</button>
               onClick={(e) => { e.stopPropagation(); addToCart(pkg); }}
               style={{
                 background: '#185FA5', color: 'white', border: 'none', padding: '6px 10px',
