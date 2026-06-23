@@ -772,10 +772,6 @@ const GroupToursPage = () => (
     </div>
   </div>
 );
-  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
-    <h1 style={{ color: '#185FA5', marginBottom: '20px' }}>Group Departures 2026</h1>
-
-);
   const TripsPage = () => (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
       <h1 style={{ marginBottom: '1.5rem', fontSize: '22px' }}>My Trips</h1>
