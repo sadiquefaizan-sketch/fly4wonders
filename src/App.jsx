@@ -862,7 +862,44 @@ const GroupToursPage = () => (
       </div>
     </div>
   );
+const getGalleryImages = (item) => {
+  if (!item) return [];
 
+  if (item.name === 'Thailand Group Tour') {
+    return [
+      item.image,
+      'https://images.unsplash.com/photo-1508009603885-50cf7c579365',
+      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a',
+      'https://images.unsplash.com/photo-1528181304800-259b08848526',
+      'https://images.unsplash.com/photo-1563492065599-3520f775eeed'
+    ];
+  }
+
+  if (item.name === 'Sri Lanka Group Tour') {
+    return [
+      item.image,
+      'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
+      'https://images.unsplash.com/photo-1546708973-b339540b5162',
+      'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe'
+    ];
+  }
+
+  if (item.name === 'Sikkim Darjeeling Pelling') {
+    return [
+      item.image,
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
+      'https://images.unsplash.com/photo-1464822759844-d150baec0494',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb'
+    ];
+  }
+
+  return [
+    item.image,
+    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'
+  ];
+};
   const DetailPage = () => (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
       <button
@@ -897,13 +934,7 @@ const GroupToursPage = () => (
 
   <button
     onClick={() => {
-      const images = [
-        selectedItem.image,
-        'https://images.unsplash.com/photo-1548013146-72479768bada',
-        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
-        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-        'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
-      ];
+     const images = getGalleryImages(selectedItem);
       const current = images.indexOf(galleryImage || selectedItem.image);
       const prev = (current - 1 + images.length) % images.length;
       setGalleryImage(images[prev]);
@@ -961,13 +992,7 @@ const GroupToursPage = () => (
   marginTop: '15px',
   marginBottom: '20px'
 }}>
-  {[
-    selectedItem.image,
-    'https://images.unsplash.com/photo-1548013146-72479768bada',
-    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
-    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-    'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
-  ].map((img, idx) => (
+  {getGalleryImages(selectedItem).map((img, idx) =>(
     <img
   key={idx}
   src={img}
