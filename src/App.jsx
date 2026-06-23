@@ -208,7 +208,52 @@ const packages = [
       </div>
     </div>
   );
+const InquiryForm = () => {
+  const [form, setForm] = React.useState({
+    name: '',
+    mobile: '',
+    destination: '',
+    date: ''
+  });
 
+  const sendInquiry = () => {
+    const message = `New Fly4Wonders Enquiry%0AName: ${form.name}%0AMobile: ${form.mobile}%0ADestination: ${form.destination}%0ATravel Date: ${form.date}`;
+
+    window.open(`https://wa.me/918655566816?text=${message}`, '_blank');
+  };
+
+  return (
+    <div style={{
+      background: 'white',
+      padding: '25px',
+      borderRadius: '14px',
+      marginBottom: '30px',
+      boxShadow: '0 4px 15px rgba(0,0,0,0.12)'
+    }}>
+      <h2 style={{ color: '#185FA5', marginBottom: '15px' }}>Get Free Travel Quote</h2>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
+        <input placeholder="Your Name" onChange={(e) => setForm({ ...form, name: e.target.value })} style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ccc' }} />
+        <input placeholder="Mobile Number" onChange={(e) => setForm({ ...form, mobile: e.target.value })} style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ccc' }} />
+        <input placeholder="Destination" onChange={(e) => setForm({ ...form, destination: e.target.value })} style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ccc' }} />
+        <input type="date" onChange={(e) => setForm({ ...form, date: e.target.value })} style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ccc' }} />
+      </div>
+
+      <button onClick={sendInquiry} style={{
+        marginTop: '15px',
+        background: '#FFA500',
+        color: 'white',
+        border: 'none',
+        padding: '12px 25px',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        fontWeight: 'bold'
+      }}>
+        Send Enquiry on WhatsApp
+      </button>
+    </div>
+  );
+};
   const HomePage = () => (
 <>
    <div style={{
@@ -260,6 +305,8 @@ backgroundPosition: 'center',
     </button>
   </div>
 </div>
+
+<InquiryForm />
 
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
