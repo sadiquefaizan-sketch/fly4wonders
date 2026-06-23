@@ -670,7 +670,28 @@ function App() {
       )}
     </div>
   );
-
+const WhatsAppButton = () => (
+  <a
+    href="https://wa.me/918655566816"
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      position: 'fixed',
+      bottom: '20px',
+      right: '20px',
+      background: '#25D366',
+      color: 'white',
+      padding: '15px 20px',
+      borderRadius: '50px',
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      zIndex: 9999,
+      boxShadow: '0 4px 10px rgba(0,0,0,0.3)'
+    }}
+  >
+    WhatsApp Us
+  </a>
+);
   const Footer = () => (
     <footer style={{
       background: '#f5f5f5', borderTop: '1px solid #e0e0e0',
@@ -699,6 +720,8 @@ function App() {
     <div style={{ minHeight: '100vh', background: '#f5f5f5' }}>
       <Header />
       {renderPage()}
+
+      <WhatsAppButton />
       <Footer />
       {showAuthModal && <AuthModal />}
     </div>
