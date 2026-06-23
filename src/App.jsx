@@ -896,6 +896,35 @@ const GroupToursPage = () => (
     ))}
   </div>
 )}
+{selectedItem.name === 'Sri Lanka Group Tour' && (
+  <div style={{ marginTop: '1.5rem' }}>
+    <h3 style={{ color: '#185FA5', fontSize: '16px', marginBottom: '10px' }}>
+      Day Wise Itinerary
+    </h3>
+
+    {[
+      'Day 1: Arrival Colombo – Overnight Stay',
+      'Day 2: Colombo to Anuradhapura',
+      'Day 3: Anuradhapura to Polonnaruwa & Dambulla',
+      'Day 4: Sigiriya Rock Fortress & Village Tour',
+      'Day 5: Kandy City Tour & Temple of Tooth',
+      'Day 6: Nuwara Eliya Tea Gardens & Scenic Drive',
+      'Day 7: Colombo Shopping & Airport Drop'
+    ].map((day, idx) => (
+      <p key={idx} style={{ fontSize: '13px', color: '#666', marginBottom: '6px' }}>
+        ✅ {day}
+      </p>
+    ))}
+
+    <h3 style={{ color: '#185FA5', marginTop: '15px', fontSize: '16px' }}>
+      Hotels
+    </h3>
+
+    <p>🏨 Colombo – Oak Ray Colombo</p>
+    <p>🏨 Anuradhapura – Four Points Resort</p>
+    <p>🏨 Dambulla – Sigiriya Kingdom Resort</p>
+  </div>
+)}
               {selectedItem.includes && (
                 <div style={{ marginTop: '1rem' }}>
                   <h4 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '14px' }}>Includes</h4>
