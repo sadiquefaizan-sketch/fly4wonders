@@ -875,7 +875,27 @@ const GroupToursPage = () => (
             }}>
               <h3 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '16px' }}>About</h3>
               <p style={{ lineHeight: '1.5', color: '#666', fontSize: '13px' }}>{selectedItem.description}</p>
+{selectedItem.name === 'Sikkim Darjeeling Pelling' && (
+  <div style={{ marginTop: '1.5rem' }}>
+    <h3 style={{ color: '#185FA5', fontSize: '16px', marginBottom: '10px' }}>
+      Day Wise Itinerary
+    </h3>
 
+    {[
+      'Day 1: NJP / Bagdogra Airport to Gangtok',
+      'Day 2: Tsomgo Lake & Baba Mandir Excursion',
+      'Day 3: Namchi Excursion',
+      'Day 4: Gangtok to Pelling',
+      'Day 5: Pelling to Darjeeling',
+      'Day 6: Darjeeling Local Sightseeing',
+      'Day 7: Drop at NJP / Bagdogra Airport'
+    ].map((day, idx) => (
+      <p key={idx} style={{ fontSize: '13px', color: '#666', marginBottom: '6px' }}>
+        ✅ {day}
+      </p>
+    ))}
+  </div>
+)}
               {selectedItem.includes && (
                 <div style={{ marginTop: '1rem' }}>
                   <h4 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '14px' }}>Includes</h4>
