@@ -882,7 +882,7 @@ const GroupToursPage = () => (
   {[
     selectedItem.image,
     'https://images.unsplash.com/photo-1548013146-72479768bada',
-    'https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce',
+    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
     'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
     'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
   ].map((img, idx) => (
