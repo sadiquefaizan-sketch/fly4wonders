@@ -131,60 +131,49 @@ const packages = [
   };
 
   const Header = () => (
-    <header style={{
-      background: 'white',
-     
-      marginBottom: '2rem',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      borderBottom: '3px solid #185FA5'
-    }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+  <header style={{
+    background: 'white',
+    marginBottom: '2rem',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    borderBottom: '3px solid #185FA5'
+  }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        
         <div
-  style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-    cursor: 'pointer'
-  }}
-  onClick={() => setCurrentPage('home')}
->
-
- <img
-  src="/logo.png"
-  alt="Fly4Wonders"
-  style={{
-    height: '50px',
-    width: 'auto'
-  }}
-/>
-
-  <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#185FA5' }}>
-    Fly4Wonders
-  </span>
-</div>       <nav style={{ display: 'flex', gap: '1rem', alignItems: 'center', fontSize: '14px', flexWrap: 'wrap' }}>
-            <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Home</button>
-            <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Browse</button>
-            <button onClick={() => setCurrentPage('community')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Community</button>
-            <button onClick={() => setCurrentPage('trips')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Trips</button>
-<button onClick={() => setCurrentPage('groupTours')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Group Tours</button>
-            <button onClick={() => setCurrentPage('cart')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>
-              🛒 {cart.length}
-            </button>
-            {user ? (
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <button onClick={() => setCurrentPage('profile')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px' }}>👤</button>
-               <button onClick={() => setUser(null)} style={{ background: '#FFA500', border: '1px solid #FFA500', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Logout</button>
-              </div>
-            ) : (
-              <button onClick={() => { setShowAuthModal(true); setAuthMode('login'); }} style={{ background: '#FFA500', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>Sign In</button>
-            )}
-          </nav>
+          style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}
+          onClick={() => setCurrentPage('home')}
+        >
+          <img src="/logo.png" alt="Fly4Wonders" style={{ height: '50px', width: 'auto' }} />
+          <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#185FA5' }}>
+            Fly4Wonders
+          </span>
         </div>
-      </div>
-    </header>
-  );
 
+        <nav style={{ display: 'flex', gap: '1rem', alignItems: 'center', fontSize: '14px', flexWrap: 'wrap' }}>
+          <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Home</button>
+          <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Browse</button>
+          <button onClick={() => setCurrentPage('community')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Community</button>
+          <button onClick={() => setCurrentPage('trips')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Trips</button>
+          <button onClick={() => setCurrentPage('groupTours')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Group Tours</button>
+
+          <button onClick={() => setCurrentPage('cart')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>
+            🛒 {cart.length}
+          </button>
+
+          {user ? (
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <button onClick={() => setCurrentPage('profile')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px' }}>👤</button>
+              <button onClick={() => setUser(null)} style={{ background: '#FFA500', border: '1px solid #FFA500', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Logout</button>
+            </div>
+          ) : (
+            <button onClick={() => { setShowAuthModal(true); setAuthMode('login'); }} style={{ background: '#FFA500', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>Sign In</button>
+          )}
+        </nav>
+      </div>
+    </div>
+  </header>
+);
   const AuthModal = () => (
   <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
