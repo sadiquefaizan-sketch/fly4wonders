@@ -861,7 +861,16 @@ const GroupToursPage = () => (
               borderRadius: '12px', padding: '2rem', textAlign: 'center', marginBottom: '1.5rem',
               border: '1px solid #B5D4F4'
             }}>
-              <div style={{ fontSize: '64px' }}>{selectedItem.image}</div>
+              <img
+  src={selectedItem.image}
+  alt={selectedItem.name}
+  style={{
+    width: '100%',
+    height: '400px',
+    objectFit: 'cover',
+    borderRadius: '12px'
+  }}
+/>
             </div>
 
             <h1 style={{ color: '#185FA5', marginBottom: '0.5rem', fontSize: '20px' }}>{selectedItem.name}</h1>
