@@ -130,6 +130,7 @@ const packages = [
             <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Browse</button>
             <button onClick={() => setCurrentPage('community')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Community</button>
             <button onClick={() => setCurrentPage('trips')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Trips</button>
+<button onClick={() => setCurrentPage('groupTours')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '500' }}>Group Tours</button>
             <button onClick={() => setCurrentPage('cart')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>
               🛒 {cart.length}
             </button>
@@ -717,6 +718,31 @@ style={{
     </div>
   );
 
+const GroupToursPage = () => (
+  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
+    <h1 style={{ color: '#185FA5', marginBottom: '20px' }}>Group Departures 2026</h1>
+
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+      {packages.map(pkg => (
+        <div key={pkg.id} style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+          <img src={pkg.image} alt={pkg.name} style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '10px' }} />
+          <h3 style={{ color: '#185FA5' }}>{pkg.name}</h3>
+          <p>{pkg.duration}</p>
+          <p style={{ color: '#FFA500', fontWeight: 'bold' }}>From ₹{pkg.price.toLocaleString()}</p>
+          <button
+            onClick={() => {
+              const message = `Hello Fly4Wonders, I am interested in ${pkg.name}. Please share group tour details.`;
+              window.open(`https://wa.me/918655566816?text=${encodeURIComponent(message)}`, '_blank');
+            }}
+            style={{ background: '#25D366', color: 'white', border: 'none', padding: '10px', borderRadius: '6px', width: '100%', cursor: 'pointer', fontWeight: 'bold' }}
+          >
+            Enquire on WhatsApp
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+);
   const TripsPage = () => (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
       <h1 style={{ marginBottom: '1.5rem', fontSize: '22px' }}>My Trips</h1>
@@ -926,6 +952,7 @@ const WhatsAppButton = () => (
       case 'community': return <CommunityPage />;
       case 'cart': return <CartPage />;
       case 'profile': return user ? <ProfilePage /> : <HomePage />;
+      case 'groupTours': return <GroupToursPage />;
       case 'trips': return user ? <TripsPage /> : <HomePage />;
       case 'detail': return <DetailPage />;
       default: return <HomePage />;
