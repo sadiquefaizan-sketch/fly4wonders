@@ -293,8 +293,7 @@ function App() {
             <div style={{ fontSize: '12px', color: '#888' }}>👤 {story.author.split(' ')[0]}</div>
           </div>
         ))}
-      </div>
-    </div>
+           </div>
    </>
   );
 
