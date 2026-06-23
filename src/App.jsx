@@ -290,6 +290,8 @@ backgroundPosition: 'center',
 >
   View Details
 </button>
+
+<button
               onClick={(e) => { e.stopPropagation(); addToCart(pkg); }}
               style={{
                 background: '#185FA5', color: 'white', border: 'none', padding: '6px 10px',
