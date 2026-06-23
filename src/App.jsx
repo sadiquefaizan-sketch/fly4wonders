@@ -771,7 +771,33 @@ const GroupToursPage = () => (
           <p><b>Duration:</b> {tour.duration}</p>
           <p style={{ color: '#FFA500', fontWeight: 'bold' }}>From ₹{tour.price.toLocaleString()}</p>
           <p style={{ fontSize: '13px', color: '#666' }}>{tour.includes}</p>
-
+<button
+  onClick={() => {
+    setSelectedItem({
+      ...tour,
+      destination: tour.name,
+      price: tour.price,
+      rating: 4.8,
+      reviews: 50,
+      description: `${tour.name} group departure with Fly4Wonders. Departure date: ${tour.date}. Includes: ${tour.includes}`,
+      includes: tour.includes.split(', ')
+    });
+    setCurrentPage('detail');
+  }}
+  style={{
+    background: '#FFA500',
+    color: 'white',
+    border: 'none',
+    padding: '10px',
+    borderRadius: '6px',
+    width: '100%',
+    cursor: 'pointer',
+    fontWeight: 'bold',
+    marginBottom: '8px'
+  }}
+>
+  View Details
+</button>
           <button
             onClick={() => {
               const message = `Hello Fly4Wonders, I am interested in ${tour.name} group departure on ${tour.date}. Please share details.`;
