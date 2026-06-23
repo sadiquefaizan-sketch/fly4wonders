@@ -10,7 +10,6 @@ function App() {
   const [communityTab, setCommunityTab] = useState('stories');
   const [selectedItem, setSelectedItem] = useState(null);
   const [galleryImage, setGalleryImage] = useState('');
-  const [galleryImage, setGalleryImage] = useState('');
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
 
   const hotels = [
