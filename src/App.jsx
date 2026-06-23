@@ -181,14 +181,57 @@ function App() {
   );
 
   const HomePage = () => (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-      <div style={{
-        background: 'linear-gradient(135deg, #185FA5 0%, #0C447C 100%)',
-        color: 'white', padding: '2rem', borderRadius: '12px', marginBottom: '2rem', textAlign: 'center'
-      }}>
-        <h1 style={{ fontSize: '28px', marginBottom: '0.5rem' }}>Discover Your Next Adventure</h1>
-        <p style={{ fontSize: '16px', marginBottom: '1.5rem', opacity: 0.9 }}>Book hotels, packages & connect with travelers</p>
-      </div>
+   <div style={{
+  backgroundImage: "url('/logo.png')",
+  backgroundColor: '#185FA5',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'right center',
+  backgroundSize: '220px',
+  color: 'white',
+  padding: '4rem 2rem',
+  borderRadius: '16px',
+  marginBottom: '2rem'
+}}>
+  <div style={{ maxWidth: '600px' }}>
+    <h1 style={{
+      fontSize: '42px',
+      fontWeight: 'bold',
+      marginBottom: '10px'
+    }}>
+      Fly4Wonders
+    </h1>
+
+    <p style={{
+      fontSize: '20px',
+      marginBottom: '15px'
+    }}>
+      Explore the World with Confidence
+    </p>
+
+    <p style={{
+      fontSize: '16px',
+      opacity: 0.9,
+      marginBottom: '25px'
+    }}>
+      International Tours • Visa Assistance • Group Departures • Cruises • Flights
+    </p>
+
+    <button
+      onClick={() => setCurrentPage('bookings')}
+      style={{
+        background: '#FFA500',
+        color: 'white',
+        border: 'none',
+        padding: '12px 24px',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        fontWeight: 'bold'
+      }}
+    >
+      Explore Packages
+    </button>
+  </div>
+</div>
 
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
@@ -590,7 +633,7 @@ function App() {
       >
         ← Back
       </button>
-
+	
       {selectedItem && (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 250px', gap: '1.5rem' }}>
           <div>
