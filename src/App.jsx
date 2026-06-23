@@ -734,7 +734,8 @@ image:'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
     date: 'August 2026',
     duration: '6 Nights / 7 Days',
     price: 45000,
-    includes: 'Hotel, Meals, AC Coach, Sightseeing'
+    includes: 'Hotel, Meals, AC Coach, Sightseeing',
+image:'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
   },
   {
     id: 3,
@@ -742,7 +743,8 @@ image:'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
     date: 'October 2026',
     duration: '5 Nights / 6 Days',
     price: 39999,
-    includes: 'Hotel, Breakfast, Transfers, Sightseeing'
+    includes: 'Hotel, Breakfast, Transfers, Sightseeing',
+image: 'https://images.unsplash.com/photo-1528181304800-259b08848526',
   }
 ];
 
