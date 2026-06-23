@@ -271,7 +271,7 @@ backgroundPosition: 'center',
             <h3 style={{ marginBottom: '0.25rem', color: '#185FA5', fontSize: '14px' }}>{pkg.name}</h3>
             <p style={{ color: '#888', fontSize: '12px', marginBottom: '0.5rem' }}>{pkg.duration}</p>
             <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#FFA500', marginBottom: '0.5rem' }}>₹{(pkg.price/1000).toFixed(0)}k</div>
-            <button<button
+            <button
   onClick={() => {
     setSelectedItem(pkg);
     setCurrentPage('detail');
