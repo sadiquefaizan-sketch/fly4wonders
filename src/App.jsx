@@ -697,10 +697,4 @@ function App() {
   );
 }
 
-export default App;  <Footer />
-      {showAuthModal && <AuthModal />}
-    </div>
-  );
-}
-
 export default App;
