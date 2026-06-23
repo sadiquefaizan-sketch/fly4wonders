@@ -869,6 +869,16 @@ const WhatsAppButton = () => (
   return (
     <div style={{ minHeight: '100vh', background: '#f5f5f5' }}>
       <Header />
+<div style={{
+  background: '#FFA500',
+  color: 'white',
+  textAlign: 'center',
+  padding: '8px',
+  fontWeight: 'bold',
+  fontSize: '14px'
+}}>
+  📞 +91 86555 66816 | ✉️ sadiqfaizan@fly4wonders.com
+</div>
       {renderPage()}
 
       <WhatsAppButton />
