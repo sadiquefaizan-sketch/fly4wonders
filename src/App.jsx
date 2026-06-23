@@ -33,6 +33,7 @@ const [leadForm, setLeadForm] = useState({
   travelDate: '',
   pax: ''
 });
+  const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
 useEffect(() => {
   if (!selectedItem) return;
   const images = getGalleryImages(selectedItem);
@@ -46,7 +47,6 @@ useEffect(() => {
 
   return () => clearInterval(timer);
 }, [selectedItem]);
-  const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
 
   const hotels = [
     { id: 1, name: 'Beachfront Paradise', location: 'Goa', price: 3500, rating: 4.8, image: '🏨', description: 'Luxury beachside resort', reviews: 245, amenities: ['WiFi', 'Pool', 'Spa'] },
