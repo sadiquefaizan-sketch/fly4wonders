@@ -381,7 +381,26 @@ backgroundPosition: 'center',
             >
               Add to Cart
             </button>
-          </div>
+<button
+  onClick={() => {
+const message = `Hello Fly4Wonders, I am interested in ${pkg.name}. Please share details.`;
+window.open(`https://wa.me/918655566816?text=${encodeURIComponent(message)}`, '_blank');
+}}
+style={{
+  background: '#25D366',
+  color: 'white',
+  border: 'none',
+  padding: '6px 10px',
+  borderRadius: '6px',
+  cursor: 'pointer',
+  fontSize: '12px',
+  width: '100%',
+  marginTop: '8px',
+  fontWeight: 'bold'
+}}
+>
+  Get Quote
+</button>          </div>
         ))}
       </div>
 
