@@ -861,7 +861,17 @@ const GroupToursPage = () => (
               borderRadius: '12px', padding: '2rem', textAlign: 'center', marginBottom: '1.5rem',
               border: '1px solid #B5D4F4'
             }}>
-              <img
+             <img
+  src={selectedItem.image}
+  alt={selectedItem.name}
+  style={{
+    width: '100%',
+    height: '400px',
+    objectFit: 'cover',
+    borderRadius: '12px'
+  }}
+/>
+
 <div style={{
   display: 'grid',
   gridTemplateColumns: 'repeat(5, 1fr)',
@@ -890,15 +900,6 @@ const GroupToursPage = () => (
     />
   ))}
 </div>
-  src={selectedItem.image}
-  alt={selectedItem.name}
-  style={{
-    width: '100%',
-    height: '400px',
-    objectFit: 'cover',
-    borderRadius: '12px'
-  }}
-/>
             </div>
 
             <h1 style={{ color: '#185FA5', marginBottom: '0.5rem', fontSize: '20px' }}>{selectedItem.name}</h1>
@@ -910,7 +911,7 @@ const GroupToursPage = () => (
               background: 'white', border: '1px solid #e0e0e0', borderRadius: '12px',
               padding: '1.5rem'
             }}>
-              <h3 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '16px' }}
+              
 <div style={{
   display: 'flex',
   gap: '15px',
@@ -926,7 +927,7 @@ const GroupToursPage = () => (
   <div>📸 Sightseeing</div>
   <div>🧑‍💼 Tour Manager</div>
 </div>
->About</h3>
+<h3 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '16px' }}>About</h3>
               <p style={{ lineHeight: '1.5', color: '#666', fontSize: '13px' }}>{selectedItem.description}</p>
 {selectedItem.name === 'Sikkim Darjeeling Pelling' && (
   <div style={{ marginTop: '1.5rem' }}>
