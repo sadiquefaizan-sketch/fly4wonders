@@ -9,6 +9,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   const [communityTab, setCommunityTab] = useState('stories');
   const [selectedItem, setSelectedItem] = useState(null);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
 
   const hotels = [
@@ -862,7 +863,7 @@ const GroupToursPage = () => (
               border: '1px solid #B5D4F4'
             }}>
              <img
-  src={selectedItem.image}
+  src={galleryImage || selectedItem.image}
   alt={selectedItem.name}
   style={{
     width: '100%',
@@ -887,15 +888,17 @@ const GroupToursPage = () => (
     'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
   ].map((img, idx) => (
     <img
-      key={idx}
-      src={img}
-      alt=""
-      style={{
+  key={idx}
+  src={img}
+  alt=""
+  onClick={() => setGalleryImage(img)}      
+style={{
         width: '100%',
         height: '90px',
         objectFit: 'cover',
         borderRadius: '8px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+border: (galleryImage || selectedItem.image) === img ? '3px solid #FFA500' : '2px solid transparent'
       }}
     />
   ))}
