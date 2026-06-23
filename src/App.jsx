@@ -725,7 +725,8 @@ const groupTours = [
     date: '28 Sep 2026',
     duration: '6 Nights / 7 Days',
     price: 27999,
-    includes: 'Accommodation, Breakfast & Dinner, Sightseeing Car, Namchi Excursion'
+    includes: includes: 'Accommodation, Breakfast & Dinner, Sightseeing Car, Namchi Excursion',
+image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
   },
   {
     id: 2,
@@ -752,6 +753,17 @@ const GroupToursPage = () => (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
       {groupTours.map(tour => (
         <div key={tour.id} style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+<img
+  src={tour.image}
+  alt={tour.name}
+  style={{
+    width: '100%',
+    height: '180px',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    marginBottom: '12px'
+  }}
+/>
           <h3 style={{ color: '#185FA5' }}>{tour.name}</h3>
           <p><b>Departure:</b> {tour.date}</p>
           <p><b>Duration:</b> {tour.duration}</p>
