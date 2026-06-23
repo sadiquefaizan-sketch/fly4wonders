@@ -9,7 +9,8 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   const [communityTab, setCommunityTab] = useState('stories');
   const [selectedItem, setSelectedItem] = useState(null);
-  const [galleryIndex, setGalleryIndex] = useState(0);
+  const [galleryImage, setGalleryImage] = useState('');
+  const [galleryImage, setGalleryImage] = useState('');
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
 
   const hotels = [
