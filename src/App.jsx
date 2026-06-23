@@ -1128,13 +1128,18 @@ border: (galleryImage || selectedItem.image) === img ? '3px solid #FFA500' : '2p
 
             <button
               onClick={() => { addToCart(selectedItem); setCurrentPage('cart'); }}
+              style={{
+                width: '100%', background: '#185FA5', color: 'white', border: 'none',
+                padding: '10px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold',
+                marginBottom: '0.5rem', fontSize: '13px'
+              }}
+            >
+              Add to Cart
+            </button>
 <button
   onClick={() => {
     const message = `Hello Fly4Wonders, please send me PDF itinerary for ${selectedItem.name}.`;
-    window.open(
-      `https://wa.me/918655566816?text=${encodeURIComponent(message)}`,
-      '_blank'
-    );
+    window.open(`https://wa.me/918655566816?text=${encodeURIComponent(message)}`, '_blank');
   }}
   style={{
     width: '100%',
@@ -1149,17 +1154,8 @@ border: (galleryImage || selectedItem.image) === img ? '3px solid #FFA500' : '2p
     marginTop: '8px'
   }}
 >
-  📄 Download PDF Itinerary
+  Download PDF Itinerary
 </button>
-              style={{
-                width: '100%', background: '#185FA5', color: 'white', border: 'none',
-                padding: '10px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold',
-                marginBottom: '0.5rem', fontSize: '13px'
-              }}
-            >
-              Add to Cart
-            </button>
-
             <button
               onClick={() => toggleFavorite(selectedItem.id)}
              style={{
