@@ -775,26 +775,6 @@ const GroupToursPage = () => (
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
     <h1 style={{ color: '#185FA5', marginBottom: '20px' }}>Group Departures 2026</h1>
 
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
-      {packages.map(pkg => (
-        <div key={pkg.id} style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-          <img src={pkg.image} alt={pkg.name} style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '10px' }} />
-          <h3 style={{ color: '#185FA5' }}>{pkg.name}</h3>
-          <p>{pkg.duration}</p>
-          <p style={{ color: '#FFA500', fontWeight: 'bold' }}>From ₹{pkg.price.toLocaleString()}</p>
-          <button
-            onClick={() => {
-              const message = `Hello Fly4Wonders, I am interested in ${pkg.name}. Please share group tour details.`;
-              window.open(`https://wa.me/918655566816?text=${encodeURIComponent(message)}`, '_blank');
-            }}
-            style={{ background: '#25D366', color: 'white', border: 'none', padding: '10px', borderRadius: '6px', width: '100%', cursor: 'pointer', fontWeight: 'bold' }}
-          >
-            Enquire on WhatsApp
-          </button>
-        </div>
-      ))}
-    </div>
-  </div>
 );
   const TripsPage = () => (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
