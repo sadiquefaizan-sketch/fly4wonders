@@ -28,15 +28,7 @@ function App() {
   const [galleryImage, setGalleryImage] = useState('');
 useEffect(() => {
   if (!selectedItem) return;
-
-  const images = [
-    selectedItem.image,
-    'https://images.unsplash.com/photo-1548013146-72479768bada',
-    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
-    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-    'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
-  ];
-
+  const images = getGalleryImages(selectedItem);
   const timer = setInterval(() => {
     setGalleryImage(prev => {
       const current = images.indexOf(prev || selectedItem.image);
@@ -764,7 +756,7 @@ const groupTours = [
     duration: '6 Nights / 7 Days',
     price: 27999,
     includes:'Accommodation, Breakfast & Dinner, Sightseeing Car, Namchi Excursion',
-image:'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
+image: sikkim1
   },
   {
     id: 2,
@@ -773,7 +765,7 @@ image:'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
     duration: '6 Nights / 7 Days',
     price: 45000,
     includes: 'Hotel, Meals, AC Coach, Sightseeing',
-image:'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
+image: srilanka1,
   },
   {
     id: 3,
@@ -782,7 +774,7 @@ image:'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
     duration: '5 Nights / 6 Days',
     price: 39999,
     includes: 'Hotel, Breakfast, Transfers, Sightseeing',
-image: 'https://images.unsplash.com/photo-1528181304800-259b08848526',
+image: thailand1,
   }
 ];
 
@@ -952,13 +944,7 @@ const getGalleryImages = (item) => {
 
   <button
     onClick={() => {
-      const images = [
-        selectedItem.image,
-        'https://images.unsplash.com/photo-1548013146-72479768bada',
-        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
-        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-        'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
-      ];
+      const images = getGalleryImages(selectedItem);
       const current = images.indexOf(galleryImage || selectedItem.image);
       const next = (current + 1) % images.length;
       setGalleryImage(images[next]);
