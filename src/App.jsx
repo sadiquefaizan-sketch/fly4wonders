@@ -880,20 +880,20 @@ const getGalleryImages = (item) => {
       item.image,
       'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
       'https://images.unsplash.com/photo-1546708973-b339540b5162',
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
+      'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe',
+      'https://images.unsplash.com/photo-1503457574465-494bba506e52'
     ];
   }
 
   if (item.name === 'Sikkim Darjeeling Pelling') {
-    return [
-      item.image,
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23',
-      'https://images.unsplash.com/photo-1464822759844-d150baec0494',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee'
-    ];
-  }
+  return [
+    item.image,
+    'https://images.unsplash.com/photo-1516483638261-f4dbaf036963',
+    'https://images.unsplash.com/photo-1548013146-72479768bada',
+    'https://images.unsplash.com/photo-1598091383021-15ddea10925d',
+    'https://images.unsplash.com/photo-1441974231531-c6227db76b6e'
+  ];
+}
 
   return [
     item.image,
