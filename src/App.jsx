@@ -1,5 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import thailand1 from './images/thailand1.jpg';
+import thailand2 from './images/thailand2.jpg';
+import thailand3 from './images/thailand3.jpg';
+import thailand4 from './images/thailand4.jpg';
+import thailand5 from './images/thailand5.jpg';
 
+import srilanka1 from './images/srilanka1.jpg';
+import srilanka2 from './images/srilanka2.jpg';
+import srilanka3 from './images/srilanka3.jpg';
+import srilanka4 from './images/srilanka4.jpg';
+import srilanka5 from './images/srilanka5.jpg';
+
+import sikkim1 from './images/sikkim1.jpg';
+import sikkim2 from './images/sikkim2.jpg';
+import sikkim3 from './images/sikkim3.jpg';
+import sikkim4 from './images/sikkim4.jpg';
+import sikkim5 from './images/sikkim5.jpg';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [user, setUser] = useState(null);
@@ -866,39 +882,18 @@ const getGalleryImages = (item) => {
   if (!item) return [];
 
   if (item.name === 'Thailand Group Tour') {
-    return [
-      item.image,
-      'https://images.unsplash.com/photo-1508009603885-50cf7c579365',
-      'https://images.unsplash.com/photo-1528181304800-259b08848526',
-      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'
-    ];
+    return [thailand1, thailand2, thailand3, thailand4, thailand5];
   }
 
   if (item.name === 'Sri Lanka Group Tour') {
-    return [
-      item.image,
-      'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
-      'https://images.unsplash.com/photo-1546708973-b339540b5162',
-      'https://images.unsplash.com/photo-1586861635167-e5223aadc9fe',
-      'https://images.unsplash.com/photo-1503457574465-494bba506e52'
-    ];
+    return [srilanka1, srilanka2, srilanka3, srilanka4, srilanka5];
   }
 
   if (item.name === 'Sikkim Darjeeling Pelling') {
-  return [
-    item.image,
-    'https://images.unsplash.com/photo-1516483638261-f4dbaf036963',
-    'https://images.unsplash.com/photo-1548013146-72479768bada',
-    'https://images.unsplash.com/photo-1598091383021-15ddea10925d',
-    'https://images.unsplash.com/photo-1441974231531-c6227db76b6e'
-  ];
-}
+    return [sikkim1, sikkim2, sikkim3, sikkim4, sikkim5];
+  }
 
-  return [
-    item.image,
-    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'
-  ];
+  return [item.image];
 };
   const DetailPage = () => (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
