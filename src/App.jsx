@@ -925,7 +925,36 @@ const GroupToursPage = () => (
     <p>🏨 Dambulla – Sigiriya Kingdom Resort</p>
   </div>
 )}
-              {selectedItem.includes && (
+  {selectedItem.name === 'Thailand Group Tour' && (
+  <div style={{ marginTop: '1.5rem' }}>
+    <h3 style={{ color: '#185FA5', fontSize: '16px', marginBottom: '10px' }}>
+      Day Wise Itinerary
+    </h3>
+
+    {[
+      'Day 1: Arrival Bangkok – Transfer to Pattaya',
+      'Day 2: Coral Island Tour with Lunch',
+      'Day 3: Pattaya City Tour & Alcazar Show',
+      'Day 4: Pattaya to Bangkok – City & Temple Tour',
+      'Day 5: Safari World & Marine Park',
+      'Day 6: Bangkok Shopping & Airport Drop'
+    ].map((day, idx) => (
+      <p key={idx} style={{ fontSize: '13px', color: '#666', marginBottom: '6px' }}>
+        ✅ {day}
+      </p>
+    ))}
+
+    <h3 style={{ color: '#185FA5', marginTop: '15px', fontSize: '16px' }}>
+      Package Highlights
+    </h3>
+
+    <p>🏨 Pattaya + Bangkok Hotel Stay</p>
+    <p>🍽️ Daily Breakfast</p>
+    <p>🚐 Airport Transfers & Sightseeing</p>
+    <p>🏝️ Coral Island Tour</p>
+  </div>
+)}
+            {selectedItem.includes && (
                 <div style={{ marginTop: '1rem' }}>
                   <h4 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '14px' }}>Includes</h4>
                   <ul style={{ listStyle: 'none', padding: 0, fontSize: '13px' }}>
