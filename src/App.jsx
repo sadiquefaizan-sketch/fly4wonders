@@ -692,16 +692,65 @@ const WhatsAppButton = () => (
     WhatsApp Us
   </a>
 );
-  const Footer = () => (
-    <footer style={{
-      background: '#f5f5f5', borderTop: '1px solid #e0e0e0',
-      padding: '2rem 1.5rem', marginTop: '3rem'
-    }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', color: '#888', fontSize: '12px' }}>
-        <p>© 2024 Fly4wonders. All rights reserved. | Built with ❤️ for travelers</p>
+ const Footer = () => (
+  <footer
+    style={{
+      background: '#185FA5',
+      color: 'white',
+      padding: '40px 20px',
+      marginTop: '50px'
+    }}
+  >
+    <div
+      style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gap: '30px'
+      }}
+    >
+      <div>
+        <h3>Fly4Wonders</h3>
+        <p>
+          Your trusted travel partner for Thailand, Vietnam, Bali,
+          Sri Lanka, Bhutan and worldwide holiday packages.
+        </p>
       </div>
-    </footer>
-  );
+
+      <div>
+        <h3>Quick Links</h3>
+        <p>Home</p>
+        <p>Tour Packages</p>
+        <p>Community</p>
+        <p>Contact Us</p>
+      </div>
+
+      <div>
+        <h3>Contact Us</h3>
+        <p>📞 +91 86555 66816</p>
+        <p>📧 sadiqfaizan@fly4wonders.com</p>
+        <p>📍 Mumbai, India</p>
+      </div>
+    </div>
+
+    <hr
+      style={{
+        margin: '20px 0',
+        border: '1px solid rgba(255,255,255,0.2)'
+      }}
+    />
+
+    <div
+      style={{
+        textAlign: 'center',
+        fontSize: '14px'
+      }}
+    >
+      © 2026 Fly4Wonders. All Rights Reserved.
+    </div>
+  </footer>
+);
 
   const renderPage = () => {
     switch (currentPage) {
