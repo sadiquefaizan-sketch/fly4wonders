@@ -860,8 +860,9 @@ const GroupToursPage = () => (
             <div style={{
               background: 'linear-gradient(135deg, #E6F1FB 0%, #85B7EB 100%)',
               borderRadius: '12px', padding: '2rem', textAlign: 'center', marginBottom: '1.5rem',
-              border: '1px solid #B5D4F4'
-           <div style={{ position: 'relative' }}>
+             border: '1px solid #B5D4F4'
+}}>
+<div style={{ position: 'relative' }}>
   <img
     src={galleryImage || selectedItem.image}
     alt={selectedItem.name}
@@ -931,7 +932,6 @@ const GroupToursPage = () => (
     ›
   </button>
 </div>
- }}>
             
 <div style={{
   display: 'grid',
