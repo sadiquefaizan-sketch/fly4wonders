@@ -224,8 +224,9 @@ const packages = [
           }}
         >
           {authMode === 'login' ? 'Sign In' : 'Create Account'}
-        
         <button
+
+ <button
           onClick={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}
           style={{
             width: '100%', padding: '10px', background: 'white', color: '#185FA5', border: '1px solid #185FA5',
