@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../logo.png';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -85,14 +84,14 @@ function App() {
   onClick={() => setCurrentPage('home')}
 >
 
-  <img
-    src={logo}
-    alt="Fly4Wonders"
-    style={{
-      height: '50px',
-      width: 'auto'
-    }}
-  />
+ <img
+  src="/logo.png"
+  alt="Fly4Wonders"
+  style={{
+    height: '50px',
+    width: 'auto'
+  }}
+/>
 
   <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#185FA5' }}>
     Fly4Wonders
