@@ -26,6 +26,13 @@ function App() {
   const [communityTab, setCommunityTab] = useState('stories');
   const [selectedItem, setSelectedItem] = useState(null);
   const [galleryImage, setGalleryImage] = useState('');
+const [leadForm, setLeadForm] = useState({
+  name: '',
+  mobile: '',
+  email: '',
+  travelDate: '',
+  pax: ''
+});
 useEffect(() => {
   if (!selectedItem) return;
   const images = getGalleryImages(selectedItem);
@@ -167,7 +174,7 @@ const packages = [
             {user ? (
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <button onClick={() => setCurrentPage('profile')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px' }}>👤</button>
-                <button onClick={() => setUser(null)} style={{ background: '#FFA500', border: '1px solid #FFA500', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Logout</button>
+                <button onClick={() => setUser(null)} style={{ background: '#FFA500', border: '1px solid #FFA500', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Logout
               </div>
             ) : (
               <button onClick={() => { setShowAuthModal(true); setAuthMode('login'); }} style={{ background: '#FFA500', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>Sign In</button>
@@ -217,7 +224,7 @@ const packages = [
           }}
         >
           {authMode === 'login' ? 'Sign In' : 'Create Account'}
-        </button>
+        
         <button
           onClick={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}
           style={{
@@ -1168,6 +1175,69 @@ border: (galleryImage || selectedItem.image) === img ? '3px solid #FFA500' : '2p
             >
               {favorites.includes(selectedItem.id) ? '❤️ Saved' : '🤍 Save'}
             </button>
+
+<div style={{
+  marginTop: '15px',
+  borderTop: '1px solid #ddd',
+  paddingTop: '15px'
+}}>
+  <h4 style={{ color: '#185FA5', marginBottom: '10px' }}>Get Best Quote</h4>
+
+  <input type="text" placeholder="Your Name" value={leadForm.name}
+    onChange={(e) => setLeadForm({...leadForm, name: e.target.value})}
+    style={{ width:'100%', padding:'8px', marginBottom:'8px' }}
+  />
+
+  <input type="text" placeholder="Mobile Number" value={leadForm.mobile}
+    onChange={(e) => setLeadForm({...leadForm, mobile: e.target.value})}
+    style={{ width:'100%', padding:'8px', marginBottom:'8px' }}
+  />
+
+  <input type="email" placeholder="Email" value={leadForm.email}
+    onChange={(e) => setLeadForm({...leadForm, email: e.target.value})}
+    style={{ width:'100%', padding:'8px', marginBottom:'8px' }}
+  />
+
+  <input type="date" value={leadForm.travelDate}
+    onChange={(e) => setLeadForm({...leadForm, travelDate: e.target.value})}
+    style={{ width:'100%', padding:'8px', marginBottom:'8px' }}
+  />
+
+  <input type="number" placeholder="No. of Pax" value={leadForm.pax}
+    onChange={(e) => setLeadForm({...leadForm, pax: e.target.value})}
+    style={{ width:'100%', padding:'8px', marginBottom:'8px' }}
+  />
+
+  <button
+    onClick={() => {
+      const msg = `New Enquiry
+Package: ${selectedItem.name}
+Name: ${leadForm.name}
+Mobile: ${leadForm.mobile}
+Email: ${leadForm.email}
+Travel Date: ${leadForm.travelDate}
+Pax: ${leadForm.pax}`;
+
+      window.open(`https://wa.me/918655566816?text=${encodeURIComponent(msg)}`, '_blank');
+    }}
+    style={{
+      width:'100%',
+      background:'#25D366',
+      color:'white',
+      border:'none',
+      padding:'10px',
+      borderRadius:'6px',
+      fontWeight:'bold',
+      cursor:'pointer'
+    }}
+  >
+    Get Best Quote
+  </button>
+</div>
+
+          </div>
+        </div>
+      )}
           </div>
         </div>
       )}
