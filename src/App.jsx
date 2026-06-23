@@ -725,8 +725,8 @@ const groupTours = [
     date: '28 Sep 2026',
     duration: '6 Nights / 7 Days',
     price: 27999,
-    includes: includes: 'Accommodation, Breakfast & Dinner, Sightseeing Car, Namchi Excursion',
-image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
+    includes:'Accommodation, Breakfast & Dinner, Sightseeing Car, Namchi Excursion',
+image:'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23'
   },
   {
     id: 2,
