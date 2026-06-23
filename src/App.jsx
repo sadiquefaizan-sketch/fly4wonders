@@ -21,11 +21,51 @@ function App() {
   ];
 
   const packages = [
-    { id: 101, name: '5-Day Goa Adventure', destination: 'Goa', price: 12000, duration: '5 days', rating: 4.7, image: '🌴', includes: ['Hotel', 'Meals', 'Water Sports'], reviews: 89 },
-    { id: 102, name: 'Himalayas Trek', destination: 'Himalayas', price: 15000, duration: '7 days', rating: 4.8, image: '⛰️', includes: ['Trekking', 'Camping', 'Guide', 'Meals'], reviews: 67 },
-    { id: 103, name: 'Bali Cultural Tour', destination: 'Bali', price: 18000, duration: '6 days', rating: 4.6, image: '🏝️', includes: ['Temple Tours', 'Spa', 'Yoga'], reviews: 154 },
-    { id: 104, name: 'Thailand Beach Escape', destination: 'Thailand', price: 14000, duration: '5 days', rating: 4.5, image: '🌊', includes: ['Island Hopping', 'Snorkeling', 'Diving'], reviews: 112 },
-  ];
+  {
+    id: 101,
+    name: 'Thailand Group Tour',
+    destination: 'Thailand',
+    price: 39999,
+    duration: '5 Nights / 6 Days',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1528181304800-259b08848526',
+    includes: ['Hotel', 'Breakfast', 'Sightseeing', 'Transfers'],
+    reviews: 120
+  },
+  {
+    id: 102,
+    name: 'Vietnam Escape',
+    destination: 'Vietnam',
+    price: 45999,
+    duration: '6 Nights / 7 Days',
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1528127269322-539801943592',
+    includes: ['Hotel', 'Cruise', 'Meals', 'Transfers'],
+    reviews: 98
+  },
+  {
+    id: 103,
+    name: 'Bali Honeymoon',
+    destination: 'Bali',
+    price: 55999,
+    duration: '5 Nights / 6 Days',
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4',
+    includes: ['Villa Stay', 'Candle Light Dinner', 'Sightseeing'],
+    reviews: 145
+  },
+  {
+    id: 104,
+    name: 'Sri Lanka Tour',
+    destination: 'Sri Lanka',
+    price: 45000,
+    duration: '6 Nights / 7 Days',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1588598198321-9735fd52455b',
+    includes: ['Hotel', 'Meals', 'AC Coach', 'Sightseeing'],
+    reviews: 88
+  }
+];
 
   const activities = [
     { id: 201, name: 'Scuba Diving', location: 'Goa', price: 2500, rating: 4.9, image: '🤿', description: 'Explore coral reefs', duration: '4 hours', reviews: 234 },
@@ -262,7 +302,17 @@ backgroundPosition: 'center',
           <div key={pkg.id} style={{
             background: 'white', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1rem'
           }}>
-            <div style={{ fontSize: '32px', marginBottom: '0.5rem' }}>{pkg.image}</div>
+            <img
+  src={pkg.image}
+  alt={pkg.name}
+  style={{
+    width: '100%',
+    height: '180px',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    marginBottom: '12px'
+  }}
+/>
             <h3 style={{ marginBottom: '0.25rem', color: '#185FA5', fontSize: '14px' }}>{pkg.name}</h3>
             <p style={{ color: '#888', fontSize: '12px', marginBottom: '0.5rem' }}>{pkg.duration}</p>
             <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#FFA500', marginBottom: '0.5rem' }}>₹{(pkg.price/1000).toFixed(0)}k</div>
