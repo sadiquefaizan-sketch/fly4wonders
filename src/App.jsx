@@ -862,6 +862,34 @@ const GroupToursPage = () => (
               border: '1px solid #B5D4F4'
             }}>
               <img
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(5, 1fr)',
+  gap: '10px',
+  marginTop: '15px',
+  marginBottom: '20px'
+}}>
+  {[
+    selectedItem.image,
+    'https://images.unsplash.com/photo-1548013146-72479768bada',
+    'https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce',
+    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
+    'https://images.unsplash.com/photo-1469474968028-56623f02e42e'
+  ].map((img, idx) => (
+    <img
+      key={idx}
+      src={img}
+      alt=""
+      style={{
+        width: '100%',
+        height: '90px',
+        objectFit: 'cover',
+        borderRadius: '8px',
+        cursor: 'pointer'
+      }}
+    />
+  ))}
+</div>
   src={selectedItem.image}
   alt={selectedItem.name}
   style={{
@@ -882,7 +910,23 @@ const GroupToursPage = () => (
               background: 'white', border: '1px solid #e0e0e0', borderRadius: '12px',
               padding: '1.5rem'
             }}>
-              <h3 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '16px' }}>About</h3>
+              <h3 style={{ marginBottom: '0.5rem', color: '#185FA5', fontSize: '16px' }}
+<div style={{
+  display: 'flex',
+  gap: '15px',
+  flexWrap: 'wrap',
+  marginBottom: '20px',
+  padding: '12px',
+  background: '#f8f9fa',
+  borderRadius: '10px'
+}}>
+  <div>🏨 3/4 Star Hotels</div>
+  <div>🍽 Breakfast Included</div>
+  <div>🚐 Transfers</div>
+  <div>📸 Sightseeing</div>
+  <div>🧑‍💼 Tour Manager</div>
+</div>
+>About</h3>
               <p style={{ lineHeight: '1.5', color: '#666', fontSize: '13px' }}>{selectedItem.description}</p>
 {selectedItem.name === 'Sikkim Darjeeling Pelling' && (
   <div style={{ marginTop: '1.5rem' }}>
