@@ -718,7 +718,60 @@ style={{
     </div>
   );
 
+const groupTours = [
+  {
+    id: 1,
+    name: 'Sikkim Darjeeling Pelling',
+    date: '28 Sep 2026',
+    duration: '6 Nights / 7 Days',
+    price: 27999,
+    includes: 'Accommodation, Breakfast & Dinner, Sightseeing Car, Namchi Excursion'
+  },
+  {
+    id: 2,
+    name: 'Sri Lanka Group Tour',
+    date: 'August 2026',
+    duration: '6 Nights / 7 Days',
+    price: 45000,
+    includes: 'Hotel, Meals, AC Coach, Sightseeing'
+  },
+  {
+    id: 3,
+    name: 'Thailand Group Tour',
+    date: 'October 2026',
+    duration: '5 Nights / 6 Days',
+    price: 39999,
+    includes: 'Hotel, Breakfast, Transfers, Sightseeing'
+  }
+];
+
 const GroupToursPage = () => (
+  <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
+    <h1 style={{ color: '#185FA5', marginBottom: '20px' }}>Group Departures 2026</h1>
+
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+      {groupTours.map(tour => (
+        <div key={tour.id} style={{ background: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+          <h3 style={{ color: '#185FA5' }}>{tour.name}</h3>
+          <p><b>Departure:</b> {tour.date}</p>
+          <p><b>Duration:</b> {tour.duration}</p>
+          <p style={{ color: '#FFA500', fontWeight: 'bold' }}>From ₹{tour.price.toLocaleString()}</p>
+          <p style={{ fontSize: '13px', color: '#666' }}>{tour.includes}</p>
+
+          <button
+            onClick={() => {
+              const message = `Hello Fly4Wonders, I am interested in ${tour.name} group departure on ${tour.date}. Please share details.`;
+              window.open(`https://wa.me/918655566816?text=${encodeURIComponent(message)}`, '_blank');
+            }}
+            style={{ background: '#25D366', color: 'white', border: 'none', padding: '10px', borderRadius: '6px', width: '100%', cursor: 'pointer', fontWeight: 'bold' }}
+          >
+            Enquire on WhatsApp
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+);
   <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
     <h1 style={{ color: '#185FA5', marginBottom: '20px' }}>Group Departures 2026</h1>
 
