@@ -175,7 +175,6 @@ const packages = [
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <button onClick={() => setCurrentPage('profile')} style={{ background: '#185FA5', border: '1px solid #185FA5', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px' }}>👤</button>
                <button onClick={() => setUser(null)} style={{ background: '#FFA500', border: '1px solid #FFA500', color: 'white', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Logout</button>
-</div>
               </div>
             ) : (
               <button onClick={() => { setShowAuthModal(true); setAuthMode('login'); }} style={{ background: '#FFA500', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '13px' }}>Sign In</button>
