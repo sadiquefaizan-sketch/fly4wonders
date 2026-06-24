@@ -318,49 +318,86 @@ const InquiryForm = () => {
 backgroundSize: 'cover',
 backgroundPosition: 'center',
   color: 'white',
-  padding: '4rem 2rem',
+  padding: '6rem 3rem',
   borderRadius: '16px',
   marginBottom: '2rem'
 }}>
-  <div style={{ maxWidth: '600px' }}>
-    <h1 style={{
-      fontSize: '42px',
-      fontWeight: 'bold',
-      marginBottom: '10px'
-    }}>
-      Fly4Wonders
-    </h1>
+  <div style={{ maxWidth: '700px' }}>
+  <div style={{
+    background: 'rgba(255,255,255,0.15)',
+    display: 'inline-block',
+    padding: '8px 15px',
+    borderRadius: '25px',
+    marginBottom: '15px',
+    fontSize: '14px',
+    fontWeight: 'bold'
+  }}>
+    🌍 Trusted by 500,000+ Travelers
+  </div>
 
-    <p style={{
-      fontSize: '20px',
-      marginBottom: '15px'
-    }}>
-      Explore the World with Confidence
-    </p>
+  <h1 style={{
+    fontSize: '52px',
+    fontWeight: 'bold',
+    lineHeight: '1.1',
+    marginBottom: '15px'
+  }}>
+    Explore The World With Fly4Wonders
+  </h1>
 
-    <p style={{
-      fontSize: '16px',
-      opacity: 0.9,
-      marginBottom: '25px'
-    }}>
-      International Tours • Visa Assistance • Group Departures • Cruises • Flights
-    </p>
+  <p style={{
+    fontSize: '22px',
+    marginBottom: '15px'
+  }}>
+    International Tours • Cruises • Visa Assistance
+  </p>
 
+  <p style={{
+    fontSize: '17px',
+    opacity: 0.95,
+    marginBottom: '30px'
+  }}>
+    Discover Japan, Switzerland, Paris, Maldives, Thailand, Bali and hundreds of amazing destinations.
+  </p>
+
+  <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
     <button
       onClick={() => setCurrentPage('bookings')}
       style={{
         background: '#FFA500',
         color: 'white',
         border: 'none',
-        padding: '12px 24px',
-        borderRadius: '8px',
+        padding: '14px 28px',
+        borderRadius: '10px',
         cursor: 'pointer',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: '16px'
       }}
     >
       Explore Packages
     </button>
+
+    <button
+      onClick={() =>
+        window.open(
+          'https://wa.me/918655566816?text=Hello Fly4Wonders, I would like to plan my holiday.',
+          '_blank'
+        )
+      }
+      style={{
+        background: '#25D366',
+        color: 'white',
+        border: 'none',
+        padding: '14px 28px',
+        borderRadius: '10px',
+        cursor: 'pointer',
+        fontWeight: 'bold',
+        fontSize: '16px'
+      }}
+    >
+      WhatsApp Now
+    </button>
   </div>
+</div>
 </div>
 <div style={{
   display: 'grid',
