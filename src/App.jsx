@@ -134,22 +134,75 @@ const packages = [
   };
 
 const Header = () => (
-  <header style={{ background: 'white', padding: '15px', marginBottom: '2rem', borderBottom: '3px solid #185FA5' }}>
-    <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer', fontWeight: 'bold', color: '#185FA5', fontSize: '22px' }}>
-        Fly4Wonders
+  <header style={{
+    background: 'white',
+    padding: '12px 20px',
+    marginBottom: '2rem',
+    borderBottom: '3px solid #185FA5',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
+    position: 'sticky',
+    top: 0,
+    zIndex: 999
+  }}>
+    <div style={{
+      maxWidth: '1200px',
+      margin: '0 auto',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      gap: '15px'
+    }}>
+      <div onClick={() => setCurrentPage('home')} style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+        cursor: 'pointer'
+      }}>
+        <img src="/logo.png" alt="Fly4Wonders" style={{ height: '48px', width: 'auto' }} />
+        <div>
+          <div style={{ fontWeight: 'bold', color: '#185FA5', fontSize: '22px' }}>
+            Fly4Wonders
+          </div>
+          <div style={{ color: '#FFA500', fontSize: '12px', fontWeight: '600' }}>
+            Travels Pvt Ltd
+          </div>
+        </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-        <button onClick={() => setCurrentPage('home')}>Home</button>
-        <button onClick={() => setCurrentPage('bookings')}>Browse</button>
-        <button onClick={() => setCurrentPage('groupTours')}>Group Tours</button>
-        <button onClick={() => setCurrentPage('cart')}>Cart {cart.length}</button>
-      </div>
+      <nav style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
+        <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Home</button>
+        <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Packages</button>
+        <button onClick={() => setCurrentPage('groupTours')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Group Tours</button>
+        <button onClick={() => setCurrentPage('community')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Community</button>
+
+        <button onClick={() => setCurrentPage('cart')} style={{
+          background: '#185FA5',
+          color: 'white',
+          border: 'none',
+          padding: '8px 12px',
+          borderRadius: '20px',
+          cursor: 'pointer',
+          fontWeight: 'bold'
+        }}>
+          🛒 {cart.length}
+        </button>
+
+        <button onClick={() => window.open('https://wa.me/918655566816', '_blank')} style={{
+          background: '#25D366',
+          color: 'white',
+          border: 'none',
+          padding: '8px 14px',
+          borderRadius: '20px',
+          cursor: 'pointer',
+          fontWeight: 'bold'
+        }}>
+          WhatsApp
+        </button>
+      </nav>
     </div>
   </header>
 );
-
 const AuthModal = () => (
   <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
