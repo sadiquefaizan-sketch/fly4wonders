@@ -481,7 +481,59 @@ backgroundPosition: 'center',
     <p>Domestic and international flight assistance.</p>
   </div>
 </div>
+<div style={{
+  background: 'white',
+  padding: '25px',
+  borderRadius: '12px',
+  marginBottom: '30px',
+  boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+}}>
+  <h2 style={{
+    textAlign: 'center',
+    color: '#185FA5',
+    marginBottom: '20px'
+  }}>
+    🔍 Search Your Dream Destination
+  </h2>
 
+  <div style={{
+    display: 'flex',
+    gap: '15px',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
+  }}>
+    <input
+      type="text"
+      placeholder="Japan, Thailand, Bali, Switzerland..."
+      style={{
+        padding: '12px',
+        minWidth: '300px',
+        borderRadius: '8px',
+        border: '1px solid #ccc'
+      }}
+    />
+
+    <button
+      onClick={() =>
+        window.open(
+          'https://wa.me/918655566816?text=Hello Fly4Wonders, I am looking for holiday packages.',
+          '_blank'
+        )
+      }
+      style={{
+        background: '#185FA5',
+        color: 'white',
+        border: 'none',
+        padding: '12px 25px',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        fontWeight: 'bold'
+      }}
+    >
+      Search Packages
+    </button>
+  </div>
+</div>
 <InquiryForm />
 
 
