@@ -367,18 +367,7 @@ backgroundPosition: 'center',
     lineHeight: '1.1',
     marginBottom: '15px'
   }}>
-<div style={{
-  background: 'rgba(255,255,255,0.15)',
-  display: 'inline-block',
-  padding: '8px 15px',
-  borderRadius: '25px',
-  marginBottom: '15px',
-  fontSize: '14px',
-  fontWeight: 'bold'
-}}>
-  🌍 Trusted by 500,000+ Travelers
-</div>
-    Explore The World With Fly4Wonders
+    Luxury Holidays & Group Tours Worldwide
   </h1>
 
   <p style={{
