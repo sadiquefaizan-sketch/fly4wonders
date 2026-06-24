@@ -440,15 +440,29 @@ backgroundPosition: 'center',
     desc: 'Alps, trains & scenic landscapes'
   }
 ].map((dest, idx) => (
-          <div
-            key={idx}
-            onClick={() => setCurrentPage('bookings')}
-            style={{
-              background: 'linear-gradient(135deg, #E6F1FB 0%, #85B7EB 100%)',
-              padding: '12px', borderRadius: '12px', textAlign: 'center', cursor: 'pointer',
-              border: '1px solid #B5D4F4'
-            }}
-          >
+         <div
+  key={idx}
+  onClick={() => setCurrentPage('bookings')}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = 'translateY(-8px)';
+    e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.20)';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = 'translateY(0)';
+    e.currentTarget.style.boxShadow = '0 4px 15px rgba(0,0,0,0.12)';
+  }}
+  style={{
+    background: 'linear-gradient(135deg, #E6F1FB 0%, #85B7EB 100%)',
+    padding: '12px',
+    borderRadius: '12px',
+    textAlign: 'center',
+    cursor: 'pointer',
+    border: '1px solid #B5D4F4',
+    overflow: 'hidden',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 4px 15px rgba(0,0,0,0.12)'
+  }}
+>
             <img
   src={dest.image}
   alt={dest.name}
