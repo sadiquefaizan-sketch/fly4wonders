@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import thailand1 from './images/thailand1.jpg';
 import thailand2 from './images/thailand2.jpg';
 import thailand3 from './images/thailand3.jpg';
@@ -117,8 +117,7 @@ const packages = [
     }
   };
 
-  const Header = () => {
-  return (
+  
   <header style={{
     background: 'white',
     marginBottom: '2rem',
@@ -161,8 +160,8 @@ const packages = [
       </div>
     </div>
   </header>
-  );
-};
+);
+ );
   const AuthModal = () => (
   <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
