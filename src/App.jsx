@@ -484,7 +484,6 @@ backgroundPosition: 'center',
 </div>
 
 <InquiryForm />
-<InquiryForm />
 
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured International Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
