@@ -440,7 +440,7 @@ backgroundPosition: 'center',
   }}>
     <h2 style={{ color: '#185FA5', margin: 0 }}>{stats.travelers.toLocaleString()}+</h2>
     <p>Happy Travelers</p>
-  </div
+ </div>
 
   <div style={{
     background: 'white',
