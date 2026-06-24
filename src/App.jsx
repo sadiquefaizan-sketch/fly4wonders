@@ -34,6 +34,32 @@ const [leadForm, setLeadForm] = useState({
   pax: ''
 });
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
+const [stats, setStats] = useState({
+  travelers: 0,
+  destinations: 0,
+  countries: 0,
+  years: 0
+});
+
+useEffect(() => {
+  const targets = {
+    travelers: 500000,
+    destinations: 120,
+    countries: 145,
+    years: 15
+  };
+
+  const timer = setInterval(() => {
+    setStats(prev => ({
+      travelers: Math.min(prev.travelers + 10000, targets.travelers),
+      destinations: Math.min(prev.destinations + 3, targets.destinations),
+      countries: Math.min(prev.countries + 4, targets.countries),
+      years: Math.min(prev.years + 1, targets.years)
+    }));
+  }, 50);
+
+  return () => clearInterval(timer);
+}, []);
 useEffect(() => {
   if (!selectedItem) return;
 
@@ -412,9 +438,9 @@ backgroundPosition: 'center',
     borderRadius: '12px',
     boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
   }}>
-    <h2 style={{ color: '#185FA5', margin: 0 }}>500000+</h2>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>{stats.travelers.toLocaleString()}+</h2>
     <p>Happy Travelers</p>
-  </div>
+  </div
 
   <div style={{
     background: 'white',
@@ -422,7 +448,7 @@ backgroundPosition: 'center',
     borderRadius: '12px',
     boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
   }}>
-    <h2 style={{ color: '#185FA5', margin: 0 }}>120+</h2>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>{stats.destinations}+</h2>
     <p>Destinations</p>
   </div>
 
@@ -432,7 +458,7 @@ backgroundPosition: 'center',
     borderRadius: '12px',
     boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
   }}>
-    <h2 style={{ color: '#185FA5', margin: 0 }}>145+</h2>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>{stats.countries}+</h2>
     <p>Countries</p>
   </div>
 
@@ -442,7 +468,7 @@ backgroundPosition: 'center',
     borderRadius: '12px',
     boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
   }}>
-    <h2 style={{ color: '#185FA5', margin: 0 }}>15+</h2>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>{stats.years}+</h2>
     <p>Years Experience</p>
   </div>
 </div>
