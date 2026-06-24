@@ -1669,7 +1669,7 @@ const WhatsAppButton = () => (
       borderRadius: '50px',
       textDecoration: 'none',
       fontWeight: 'bold',
-      zIndex: 9999,
+      zIndex: 10,
       boxShadow: '0 4px 10px rgba(0,0,0,0.3)'
     }}
   >
