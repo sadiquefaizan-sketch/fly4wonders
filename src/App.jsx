@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import thailand1 from './images/thailand1.jpg';
 import thailand2 from './images/thailand2.jpg';
 import thailand3 from './images/thailand3.jpg';
@@ -34,7 +34,23 @@ const [leadForm, setLeadForm] = useState({
   pax: ''
 });
   const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' });
+useEffect(() => {
+  if (!selectedItem) return;
 
+  const images = getGalleryImages(selectedItem);
+  if (!images || images.length === 0) return;
+
+  const timer = setInterval(() => {
+    setGalleryImage(prev => {
+      const currentImage = prev || images[0];
+      const currentIndex = images.indexOf(currentImage);
+      const nextIndex = currentIndex === -1 ? 1 : (currentIndex + 1) % images.length;
+      return images[nextIndex];
+    });
+  }, 3000);
+
+  return () => clearInterval(timer);
+}, [selectedItem, galleryImage]);
   const hotels = [
     { id: 1, name: 'Beachfront Paradise', location: 'Goa', price: 3500, rating: 4.8, image: '🏨', description: 'Luxury beachside resort', reviews: 245, amenities: ['WiFi', 'Pool', 'Spa'] },
     { id: 2, name: 'Mountain Escape', location: 'Himalayas', price: 2000, rating: 4.6, image: '🏔️', description: 'Cozy mountain lodge', reviews: 156, amenities: ['Fireplace', 'WiFi', 'Restaurant'] },
@@ -866,7 +882,7 @@ const getGalleryImages = (item) => {
 }}>
 <div style={{ position: 'relative' }}>
   <img
-    src={galleryImage || selectedItem.image}
+    src={galleryImage || getGalleryImages(selectedItem)[0]}
     alt={selectedItem.name}
     style={{
       width: '100%',
