@@ -1188,9 +1188,6 @@ Pax: ${leadForm.pax}`;
           </div>
         </div>
       )}
-          </div>
-        </div>
-      )}
     </div>
   );
 const WhatsAppButton = () => (
