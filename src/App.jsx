@@ -362,7 +362,53 @@ backgroundPosition: 'center',
     </button>
   </div>
 </div>
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+  gap: '20px',
+  marginBottom: '40px',
+  textAlign: 'center'
+}}>
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>500000+</h2>
+    <p>Happy Travelers</p>
+  </div>
 
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>120+</h2>
+    <p>Destinations</p>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>145+</h2>
+    <p>Countries</p>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h2 style={{ color: '#185FA5', margin: 0 }}>15+</h2>
+    <p>Years Experience</p>
+  </div>
+</div>
 <InquiryForm />
 
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured Destinations</h2>
