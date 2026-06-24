@@ -561,7 +561,56 @@ backgroundPosition: 'center',
   </div>
 </div>
 <InquiryForm />
+<h2 style={{
+  marginTop: '40px',
+  marginBottom: '20px',
+  color: '#185FA5',
+  textAlign: 'center'
+}}>
+  What Our Travelers Say
+</h2>
 
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+  gap: '20px',
+  marginBottom: '40px'
+}}>
+
+  <div style={{
+    background: 'white',
+    padding: '20px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h3>⭐⭐⭐⭐⭐</h3>
+    <p>"Amazing Thailand group tour. Everything was perfectly managed."</p>
+    <strong>- Utkarsh Singh</strong>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '20px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h3>⭐⭐⭐⭐⭐</h3>
+    <p>"Excellent service and very helpful visa assistance."</p>
+    <strong>- Ashwini Bhoravkar</strong>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '20px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
+  }}>
+    <h3>⭐⭐⭐⭐⭐</h3>
+    <p>"Our Switzerland trip was unforgettable. Highly recommended."</p>
+    <strong>- Aarti Nagrani</strong>
+  </div>
+
+</div>
 
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>🌎 Trending International Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
