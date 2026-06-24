@@ -344,7 +344,7 @@ const InquiryForm = () => {
 backgroundSize: 'cover',
 backgroundPosition: 'center',
   color: 'white',
-  padding: '6rem 3rem',
+  padding: '8rem 3rem',
   borderRadius: '16px',
   marginBottom: '2rem'
 }}>
@@ -367,6 +367,17 @@ backgroundPosition: 'center',
     lineHeight: '1.1',
     marginBottom: '15px'
   }}>
+<div style={{
+  background: 'rgba(255,255,255,0.15)',
+  display: 'inline-block',
+  padding: '8px 15px',
+  borderRadius: '25px',
+  marginBottom: '15px',
+  fontSize: '14px',
+  fontWeight: 'bold'
+}}>
+  🌍 Trusted by 500,000+ Travelers
+</div>
     Explore The World With Fly4Wonders
   </h1>
 
@@ -563,7 +574,7 @@ backgroundPosition: 'center',
 <InquiryForm />
 
 
-      <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured International Destinations</h2>
+      <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>🌎 Trending International Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
              {[
   {
@@ -1663,25 +1674,14 @@ const WhatsAppButton = () => (
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f5f5f5' }}>
-      <Header />
-<div style={{
-  background: '#FFA500',
-  color: 'white',
-  textAlign: 'center',
-  padding: '8px',
-  fontWeight: 'bold',
-  fontSize: '14px'
-}}>
-  📞 +91 86555 66816 | ✉️ sadiqfaizan@fly4wonders.com
-</div>
-      {renderPage()}
-
-      <WhatsAppButton />
-      <Footer />
-      {showAuthModal && <AuthModal />}
-    </div>
-  );
+  <div style={{ minHeight: '100vh', background: '#f5f5f5' }}>
+    <Header />
+    {renderPage()}
+    <WhatsAppButton />
+    <Footer />
+    {showAuthModal && <AuthModal />}
+  </div>
+);
 }
 
 export default App;
