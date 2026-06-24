@@ -1447,37 +1447,38 @@ const WhatsAppButton = () => (
   </a>
 );
  const Footer = () => (
-  <footer
-    style={{
-      background: '#185FA5',
-      color: 'white',
-      padding: '40px 20px',
-      marginTop: '50px'
-    }}
-  >
-    <div
-      style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: '30px'
-      }}
-    >
+  <footer style={{
+    background: '#185FA5',
+    color: 'white',
+    padding: '45px 20px 20px',
+    marginTop: '50px'
+  }}>
+    <div style={{
+      maxWidth: '1200px',
+      margin: '0 auto',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+      gap: '30px'
+    }}>
       <div>
-        <h3>Fly4Wonders</h3>
-        <p>
-          Your trusted travel partner for Thailand, Vietnam, Bali,
-          Sri Lanka, Bhutan and worldwide holiday packages.
-        </p>
+        <h2>✈️ Fly4Wonders</h2>
+        <p>International Tours, Cruises, Visa Assistance, Group Departures and Luxury Holidays.</p>
       </div>
 
       <div>
         <h3>Quick Links</h3>
         <p>Home</p>
         <p>Tour Packages</p>
-        <p>Community</p>
+        <p>Group Tours</p>
         <p>Contact Us</p>
+      </div>
+
+      <div>
+        <h3>Popular Destinations</h3>
+        <p>Japan</p>
+        <p>Paris</p>
+        <p>Switzerland</p>
+        <p>Maldives</p>
       </div>
 
       <div>
@@ -1488,24 +1489,13 @@ const WhatsAppButton = () => (
       </div>
     </div>
 
-    <hr
-      style={{
-        margin: '20px 0',
-        border: '1px solid rgba(255,255,255,0.2)'
-      }}
-    />
+    <hr style={{ margin: '25px 0', border: '1px solid rgba(255,255,255,0.2)' }} />
 
-    <div
-      style={{
-        textAlign: 'center',
-        fontSize: '14px'
-      }}
-    >
-      © 2026 Fly4Wonders. All Rights Reserved.
+    <div style={{ textAlign: 'center', fontSize: '14px' }}>
+      © 2026 Fly4Wonders Travels Pvt Ltd. All Rights Reserved.
     </div>
   </footer>
 );
-
   const renderPage = () => {
     switch (currentPage) {
       case 'home': return <HomePage />;
