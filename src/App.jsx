@@ -411,14 +411,35 @@ backgroundPosition: 'center',
 </div>
 <InquiryForm />
 
-      <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured Destinations</h2>
+      <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured International Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-        {[
-          { name: 'Goa', emoji: '🌴', desc: 'Beaches' },
-          { name: 'Himalayas', emoji: '⛰️', desc: 'Trekking' },
-          { name: 'Bali', emoji: '🏝️', desc: 'Culture' },
-          { name: 'Thailand', emoji: '🌊', desc: 'Islands' },
-        ].map((dest, idx) => (
+        [
+  {
+    name: 'Tokyo, Japan',
+    emoji: '🗼',
+    desc: 'Modern city & historic temples'
+  },
+  {
+    name: 'Rome, Italy',
+    emoji: '🏛️',
+    desc: 'Ancient history & world-class food'
+  },
+  {
+    name: 'Maldives',
+    emoji: '🏝️',
+    desc: 'Luxury beaches & turquoise waters'
+  },
+  {
+    name: 'Paris, France',
+    emoji: '🗼',
+    desc: 'Eiffel Tower & romantic city views'
+  },
+  {
+    name: 'Switzerland',
+    emoji: '🏔️',
+    desc: 'Alps, trains & scenic landscapes'
+  }
+].map((dest, idx) => (
           <div
             key={idx}
             onClick={() => setCurrentPage('bookings')}
