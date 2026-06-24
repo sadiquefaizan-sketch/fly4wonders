@@ -416,27 +416,26 @@ backgroundPosition: 'center',
              {[
   {
     name: 'Tokyo, Japan',
-    emoji: '🗼',
+    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf'
     desc: 'Modern city & historic temples'
   },
   {
     name: 'Rome, Italy',
-    emoji: '🏛️',
-    desc: 'Ancient history & world-class food'
+    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5',                desc: 'Ancient history & world-class food'
   },
   {
     name: 'Maldives',
-    emoji: '🏝️',
+    image: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd',
     desc: 'Luxury beaches & turquoise waters'
   },
   {
     name: 'Paris, France',
-    emoji: '🗼',
+    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34',
     desc: 'Eiffel Tower & romantic city views'
   },
   {
     name: 'Switzerland',
-    emoji: '🏔️',
+    image: 'https://images.unsplash.com/photo-1527668752968-14dc70a27c95',
     desc: 'Alps, trains & scenic landscapes'
   }
 ].map((dest, idx) => (
@@ -445,11 +444,21 @@ backgroundPosition: 'center',
             onClick={() => setCurrentPage('bookings')}
             style={{
               background: 'linear-gradient(135deg, #E6F1FB 0%, #85B7EB 100%)',
-              padding: '1.5rem', borderRadius: '12px', textAlign: 'center', cursor: 'pointer',
+              padding: '12px', borderRadius: '12px', textAlign: 'center', cursor: 'pointer',
               border: '1px solid #B5D4F4'
             }}
           >
-            <div style={{ fontSize: '40px', marginBottom: '0.5rem' }}>{dest.emoji}</div>
+            <img
+  src={dest.image}
+  alt={dest.name}
+  style={{
+    width: '100%',
+    height: '180px',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    marginBottom: '10px'
+  }}
+/>
             <h3 style={{ color: '#185FA5', marginBottom: '0.25rem', fontSize: '16px' }}>{dest.name}</h3>
             <p style={{ color: '#0C447C', fontSize: '12px' }}>{dest.desc}</p>
           </div>
