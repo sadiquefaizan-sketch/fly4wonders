@@ -561,6 +561,35 @@ backgroundPosition: 'center',
   </div>
 </div>
 <InquiryForm />
+<div style={{
+  background: 'linear-gradient(135deg, #185FA5, #0C447C)',
+  color: 'white',
+  padding: '30px',
+  borderRadius: '16px',
+  marginBottom: '40px',
+  textAlign: 'center'
+}}>
+  <h2 style={{ marginBottom: '10px' }}>🔥 Upcoming Group Departures</h2>
+  <p style={{ marginBottom: '20px', fontSize: '18px' }}>
+    Thailand • Bali • Sikkim • Sri Lanka • Dubai • Vietnam
+  </p>
+
+  <button
+    onClick={() => setCurrentPage('groupTours')}
+    style={{
+      background: '#FFA500',
+      color: 'white',
+      border: 'none',
+      padding: '12px 28px',
+      borderRadius: '8px',
+      cursor: 'pointer',
+      fontWeight: 'bold',
+      fontSize: '16px'
+    }}
+  >
+    View Group Tours
+  </button>
+</div>
 <h2 style={{
   marginTop: '40px',
   marginBottom: '20px',
