@@ -117,8 +117,7 @@ const packages = [
     }
   };
 
-  const Header = () => {
-  return (
+  const Header = () => (
   <header style={{
     background: 'white',
     marginBottom: '2rem',
@@ -161,8 +160,7 @@ const packages = [
       </div>
     </div>
   </header>
-  );
-};
+);
 
 const AuthModal = () => (
   <div style={{
