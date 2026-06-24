@@ -416,12 +416,13 @@ backgroundPosition: 'center',
              {[
   {
     name: 'Tokyo, Japan',
-    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf'
+    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf',
     desc: 'Modern city & historic temples'
   },
   {
     name: 'Rome, Italy',
-    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5',                desc: 'Ancient history & world-class food'
+    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5',
+     desc: 'Ancient history & world-class food'
   },
   {
     name: 'Maldives',
