@@ -467,15 +467,30 @@ backgroundPosition: 'center',
   src={dest.image}
   alt={dest.name}
   style={{
-    width: '100%',
-    height: '180px',
-    objectFit: 'cover',
-    borderRadius: '10px',
-    marginBottom: '10px'
-  }}
+  width: '100%',
+  height: '180px',
+  objectFit: 'cover',
+  borderRadius: '10px',
+  marginBottom: '10px',
+  transition: 'transform 0.4s ease'
+}}
 />
             <h3 style={{ color: '#185FA5', marginBottom: '0.25rem', fontSize: '16px' }}>{dest.name}</h3>
             <p style={{ color: '#0C447C', fontSize: '12px' }}>{dest.desc}</p>
+<button
+  style={{
+    marginTop: '10px',
+    background: '#FFA500',
+    color: 'white',
+    border: 'none',
+    padding: '8px 14px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    fontWeight: 'bold'
+  }}
+>
+  Explore Destination
+</button>
           </div>
         ))}
       </div>
