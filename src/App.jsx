@@ -446,6 +446,44 @@ backgroundPosition: 'center',
     <p>Years Experience</p>
   </div>
 </div>
+</div>
+
+<h2 style={{
+  textAlign: 'center',
+  color: '#185FA5',
+  marginBottom: '25px'
+}}>
+  Our Travel Services
+</h2>
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+  gap: '20px',
+  marginBottom: '40px'
+}}>
+  <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 3px 10px rgba(0,0,0,0.08)', textAlign: 'center' }}>
+    <h3>✈️ International Tours</h3>
+    <p>Customized holidays across the world.</p>
+  </div>
+
+  <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 3px 10px rgba(0,0,0,0.08)', textAlign: 'center' }}>
+    <h3>🛂 Visa Assistance</h3>
+    <p>Complete visa support and documentation guidance.</p>
+  </div>
+
+  <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 3px 10px rgba(0,0,0,0.08)', textAlign: 'center' }}>
+    <h3>🚢 Cruises</h3>
+    <p>Luxury cruise holidays and international sailings.</p>
+  </div>
+
+  <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 3px 10px rgba(0,0,0,0.08)', textAlign: 'center' }}>
+    <h3>🎟️ Flight Booking</h3>
+    <p>Domestic and international flight assistance.</p>
+  </div>
+</div>
+
+<InquiryForm />
 <InquiryForm />
 
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured International Destinations</h2>
