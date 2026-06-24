@@ -410,56 +410,7 @@ backgroundPosition: 'center',
   </div>
 </div>
 <InquiryForm />
-<h2 style={{
-  marginTop: '40px',
-  marginBottom: '20px',
-  color: '#185FA5',
-  textAlign: 'center'
-}}>
-  What Our Travelers Say
-</h2>
 
-<div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-  gap: '20px',
-  marginBottom: '40px'
-}}>
-
-  <div style={{
-    background: 'white',
-    padding: '20px',
-    borderRadius: '12px',
-    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
-  }}>
-    <h3>⭐⭐⭐⭐⭐</h3>
-    <p>"Amazing Thailand group tour. Everything was perfectly managed."</p>
-    <strong>- Ahmed Khan</strong>
-  </div>
-
-  <div style={{
-    background: 'white',
-    padding: '20px',
-    borderRadius: '12px',
-    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
-  }}>
-    <h3>⭐⭐⭐⭐⭐</h3>
-    <p>"Excellent service and very helpful visa assistance."</p>
-    <strong>- Fatima Shaikh</strong>
-  </div>
-
-  <div style={{
-    background: 'white',
-    padding: '20px',
-    borderRadius: '12px',
-    boxShadow: '0 3px 10px rgba(0,0,0,0.08)'
-  }}>
-    <h3>⭐⭐⭐⭐⭐</h3>
-    <p>"Our Sri Lanka trip was unforgettable. Highly recommended."</p>
-    <strong>- Imran Patel</strong>
-  </div>
-
-</div>
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Featured Destinations</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
         {[
@@ -483,7 +434,66 @@ backgroundPosition: 'center',
           </div>
         ))}
       </div>
+<h2 style={{
+  textAlign: 'center',
+  color: '#185FA5',
+  marginBottom: '25px'
+}}>
+  Why Choose Fly4Wonders?
+</h2>
 
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+  gap: '20px',
+  marginBottom: '40px'
+}}>
+
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
+    textAlign: 'center'
+  }}>
+    <h3>✈️ Best Tour Packages</h3>
+    <p>Domestic & International Holidays.</p>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
+    textAlign: 'center'
+  }}>
+    <h3>🛂 Visa Assistance</h3>
+    <p>Complete visa support for multiple countries.</p>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
+    textAlign: 'center'
+  }}>
+    <h3>🏆 Trusted Service</h3>
+    <p>15+ years of travel expertise.</p>
+  </div>
+
+  <div style={{
+    background: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    boxShadow: '0 3px 10px rgba(0,0,0,0.08)',
+    textAlign: 'center'
+  }}>
+    <h3>📞 24×7 Support</h3>
+    <p>Always available for our travelers.</p>
+  </div>
+
+</div>
       <h2 style={{ marginBottom: '1.5rem', fontSize: '18px', color: '#185FA5' }}>Popular Packages</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
         {packages.slice(0, 3).map(pkg => (
