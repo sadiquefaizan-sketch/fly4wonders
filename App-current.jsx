@@ -60,19 +60,6 @@ useEffect(() => {
 
   return () => clearInterval(timer);
 }, []);
-
-useEffect(() => {
-  const changePage = () => {
-    const page = window.location.hash.replace('#', '');
-    if (page) setCurrentPage(page);
-  };
-
-  changePage();
-  window.addEventListener('hashchange', changePage);
-
-  return () => window.removeEventListener('hashchange', changePage);
-}, []);
-
 useEffect(() => {
   if (!selectedItem) return;
 
@@ -192,12 +179,11 @@ const Header = () => (
       flexWrap: 'wrap',
       gap: '15px'
     }}>
-      <a href="#home" style={{
+      <div onClick={() => setCurrentPage('home')} style={{
         display: 'flex',
         alignItems: 'center',
         gap: '10px',
-        cursor: 'pointer',
-        textDecoration: 'none'
+        cursor: 'pointer'
       }}>
         <img src="/logo.png" alt="Fly4Wonders" style={{ height: '48px', width: 'auto' }} />
         <div>
@@ -208,35 +194,37 @@ const Header = () => (
             Travels Pvt Ltd
           </div>
         </div>
-      </a>
+      </div>
 
       <nav style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
-        <a href="#home" style={{ color: '#185FA5', textDecoration: 'none', fontWeight: '600' }}>Home</a>
-        <a href="#bookings" style={{ color: '#185FA5', textDecoration: 'none', fontWeight: '600' }}>Packages</a>
-        <a href="#groupTours" style={{ color: '#185FA5', textDecoration: 'none', fontWeight: '600' }}>Group Tours</a>
-        <a href="#community" style={{ color: '#185FA5', textDecoration: 'none', fontWeight: '600' }}>Community</a>
+        <button onClick={() => setCurrentPage('home')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Home</button>
+        <button onClick={() => setCurrentPage('bookings')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Packages</button>
+        <button onClick={() => setCurrentPage('groupTours')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Group Tours</button>
+        <button onClick={() => setCurrentPage('community')} style={{ background: 'none', border: 'none', color: '#185FA5', cursor: 'pointer', fontWeight: '600' }}>Community</button>
 
-        <a href="#cart" style={{
+        <button onClick={() => setCurrentPage('cart')} style={{
           background: '#185FA5',
           color: 'white',
+          border: 'none',
           padding: '8px 12px',
           borderRadius: '20px',
-          fontWeight: 'bold',
-          textDecoration: 'none'
+          cursor: 'pointer',
+          fontWeight: 'bold'
         }}>
           🛒 {cart.length}
-        </a>
+        </button>
 
-        <a href="https://wa.me/918655566816" target="_blank" rel="noreferrer" style={{
+        <button onClick={() => window.open('https://wa.me/918655566816', '_blank')} style={{
           background: '#25D366',
           color: 'white',
+          border: 'none',
           padding: '8px 14px',
           borderRadius: '20px',
-          fontWeight: 'bold',
-          textDecoration: 'none'
+          cursor: 'pointer',
+          fontWeight: 'bold'
         }}>
           WhatsApp
-        </a>
+        </button>
       </nav>
     </div>
   </header>
